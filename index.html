@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/up.png" />
+    <title>Sua Virada de Chave - A Imersão</title>
+    
+    <meta name="description" content="Uma imersão online e ao vivo para reprogramar sua resposta ao estresse e dominar suas emoções." />
+    <meta name="author" content="Instituto UP" />
+
+    <meta property="og:title" content="Sua Virada de Chave - A Imersão" />
+    <meta property="og:description" content="Uma imersão online e ao vivo para reprogramar sua resposta ao estresse e dominar suas emoções." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/sua-imagem-de-compartilhamento.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/sua-imagem-de-compartilhamento.png" />
+    
+  <!-- Mercado Pago SDK (Bricks) -->
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1321351659702121');
+      fbq('track', 'PageView');
+    </script>
+  <!-- End Meta Pixel Code -->
+
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div id="whatsapp-container"></div> 
+
+    <!-- Meta Pixel noscript (moved to body to satisfy parser) -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1321351659702121&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
