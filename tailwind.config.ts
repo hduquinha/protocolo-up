@@ -54,8 +54,10 @@ export default {
 				},
 				'dark-bg': 'hsl(var(--dark-bg))',
 				'dark-section': 'hsl(var(--dark-section))',
-				'turquoise': 'hsl(var(--turquoise))',
-				'turquoise-light': 'hsl(var(--turquoise-light))',
+				'amber': 'hsl(var(--amber))',
+				'amber-light': 'hsl(var(--amber-light))',
+				'purple': 'hsl(var(--purple))',
+				'purple-light': 'hsl(var(--purple-light))',
 				'text-light': 'hsl(var(--text-light))',
 				'text-muted': 'hsl(var(--text-muted))',
 				sidebar: {

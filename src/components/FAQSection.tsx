@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, MessageCircleQuestion, Zap } from 'lucide-react';
 
 const FAQSection = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -43,76 +43,84 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="bg-gray-900 py-20 px-4 sm:px-6">
-      <div className="container max-w-5xl mx-auto">
-        <div className="text-center mb-20">
-          <div className="flex justify-center mb-8">
-            <div className="bg-turquoise/20 p-8 rounded-full transition-all duration-500 ease-in-out hover:bg-turquoise/30">
-              <HelpCircle className="w-16 h-16 text-turquoise" />
-            </div>
+    <section className="relative bg-gradient-to-b from-slate-900 to-slate-950 py-24 px-4 sm:px-6 overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple/10 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber/10 rounded-full blur-[150px]" />
+      
+      <div className="container max-w-5xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber/20 to-purple/20 border border-amber/30 rounded-full px-4 py-2 mb-6">
+            <MessageCircleQuestion className="h-4 w-4 text-amber" />
+            <span className="text-amber font-semibold text-sm uppercase tracking-wider">Tire Suas Dúvidas</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-            🤔 Perguntas <span className="text-turquoise">Frequentes</span>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
+            Perguntas <span className="bg-gradient-to-r from-amber to-amber-light bg-clip-text text-transparent">Frequentes</span>
           </h2>
           
-          <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Tire todas as suas dúvidas antes de garantir sua transformação
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Tudo que você precisa saber antes de garantir sua transformação
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-black/50 rounded-3xl border border-gray-700 overflow-hidden transition-all duration-500 ease-in-out hover:border-turquoise/30 hover:scale-[1.02]"
+              className="group"
             >
-              <button
-                onClick={() => toggleItem(index)}
-                className="w-full px-8 py-8 text-left flex items-center justify-between hover:bg-gray-800/30 transition-all duration-300"
-              >
-                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-white pr-6 leading-relaxed">
-                  {faq.question}
-                </h3>
-                <div className="flex-shrink-0">
-                  {openItems.includes(index) ? (
-                    <ChevronUp className="w-8 h-8 text-turquoise transition-transform duration-300" />
-                  ) : (
-                    <ChevronDown className="w-8 h-8 text-gray-400 transition-transform duration-300" />
-                  )}
-                </div>
-              </button>
-              
-              {openItems.includes(index) && (
-                <div className="px-8 pb-8">
-                  <div className="border-t border-gray-700 pt-6">
-                    <p className="text-gray-300 leading-relaxed text-lg lg:text-xl">
-                      {faq.answer}
-                    </p>
+              <div className={`bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl border transition-all duration-300 overflow-hidden backdrop-blur-sm ${openItems.includes(index) ? 'border-amber/50' : 'border-slate-700/50 hover:border-slate-600/50'}`}>
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-6 text-left flex items-center justify-between gap-4 transition-all duration-300"
+                >
+                  <h3 className="text-lg md:text-xl font-semibold text-white leading-relaxed">
+                    {faq.question}
+                  </h3>
+                  <div className={`flex-shrink-0 rounded-full p-2 transition-all duration-300 ${openItems.includes(index) ? 'bg-amber/20' : 'bg-slate-700/50'}`}>
+                    {openItems.includes(index) ? (
+                      <ChevronUp className="w-5 h-5 text-amber transition-transform duration-300" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-gray-400 transition-transform duration-300" />
+                    )}
+                  </div>
+                </button>
+                
+                <div className={`overflow-hidden transition-all duration-300 ${openItems.includes(index) ? 'max-h-96' : 'max-h-0'}`}>
+                  <div className="px-6 pb-6">
+                    <div className="border-t border-slate-700/50 pt-4">
+                      <p className="text-gray-300 leading-relaxed text-base lg:text-lg">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
 
         {/* CTA at the bottom */}
-        <div className="text-center mt-20">
-          <p className="text-xl lg:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto">
-            Ainda tem dúvidas? Nossa garantia no dia remove todo o risco para você!
+        <div className="text-center mt-16">
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            Ainda tem dúvidas? Nossa garantia remove todo o risco para você!
           </p>
           
-          <a href="#pricing" className="inline-block">
-            <button 
-              onClick={scrollToPricing}
-              className="bg-gradient-to-r from-turquoise to-blue-500 text-black font-bold text-xl lg:text-2xl px-12 py-8 rounded-2xl transform hover:scale-105 transition-all duration-500 ease-in-out shadow-lg hover:shadow-2xl"
-            >
-              🏨 GARANTIR VAGA PRESENCIAL AGORA
-            </button>
-          </a>
+          <button 
+            onClick={scrollToPricing}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-amber to-amber-light hover:from-amber-light hover:to-amber text-slate-900 font-bold text-lg lg:text-xl px-10 py-5 rounded-xl transform hover:scale-105 transition-all duration-500 shadow-lg shadow-amber/30 hover:shadow-amber/50"
+          >
+            <Zap className="w-6 h-6" />
+            GARANTIR MINHA VAGA AGORA
+          </button>
           
-          <p className="text-base text-gray-500 mt-6">
-            🛡️ Garantia no dia • 🔒 Pagamento seguro • 🏨 Local premium • ⭐ Qualidade garantida
+          <p className="text-sm text-gray-500 mt-4 flex items-center justify-center gap-2 flex-wrap">
+            <span>🛡️ Garantia total</span>
+            <span>•</span>
+            <span>🔒 Pagamento seguro</span>
+            <span>•</span>
+            <span>⭐ Qualidade comprovada</span>
           </p>
         </div>
       </div>

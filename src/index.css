@@ -122,7 +122,7 @@ body {
   a:focus-visible,
   input:focus-visible,
   textarea:focus-visible {
-    @apply outline-2 outline-offset-2 outline-turquoise;
+    @apply outline-2 outline-offset-2 outline-amber;
   }
 }  /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
   All colors MUST be HSL.
@@ -139,16 +139,16 @@ body {
       --popover: 0 0% 100%;
       --popover-foreground: 0 0% 0%;
 
-      --primary: 174 100% 44%;
+      --primary: 38 92% 50%;
       --primary-foreground: 0 0% 100%;
 
-      --secondary: 0 0% 96%;
-      --secondary-foreground: 0 0% 0%;
+      --secondary: 263 70% 58%;
+      --secondary-foreground: 0 0% 100%;
 
       --muted: 210 40% 96.1%;
       --muted-foreground: 215.4 16.3% 46.9%;
 
-      --accent: 174 100% 44%;
+      --accent: 263 70% 58%;
       --accent-foreground: 0 0% 100%;
 
       --destructive: 0 84.2% 60.2%;
@@ -156,12 +156,14 @@ body {
 
       --border: 214.3 31.8% 91.4%;
       --input: 214.3 31.8% 91.4%;
-      --ring: 174 100% 44%;
+      --ring: 38 92% 50%;
 
-      --dark-bg: 0 0% 4%;
-      --dark-section: 0 0% 8%;
-      --turquoise: 174 100% 44%;
-      --turquoise-light: 174 100% 50%;
+      --dark-bg: 222 47% 6%;
+      --dark-section: 222 47% 10%;
+      --amber: 38 92% 50%;
+      --amber-light: 45 93% 58%;
+      --purple: 263 70% 58%;
+      --purple-light: 270 76% 68%;
       --text-light: 0 0% 95%;
       --text-muted: 0 0% 70%;
 
@@ -241,7 +243,7 @@ body {
   .swiper-button-prev,
   .swiper-button-next {
     --swiper-navigation-size: 2rem; /* Tamanho do ícone da seta */
-    color: #40E0D0; /* Cor Turquesa */
+    color: #F59E0B; /* Cor Âmbar */
     background-color: rgba(17, 17, 17, 0.6);
     width: 44px;
     height: 44px;
@@ -276,7 +278,7 @@ body {
   }
 
   .swiper-pagination-bullet-active {
-    background-color: #40E0D0;
+    background-color: #F59E0B;
     transform: scale(1.2);
   }
 
