@@ -10,9 +10,9 @@ const PricingSection = () => {
   const plans = [
     {
       name: "Protocolo 28 Dias",
-      price: "2997",
-      originalPrice: "4997",
-      installments: "10x R$ 299,70",
+      price: "1997",
+      originalPrice: "2997",
+      installments: "10x R$ 99,70",
       description: "Protocolo completo de 28 dias com acompanhamento online.",
       features: [
         "4 Encontros Ao Vivo Online",

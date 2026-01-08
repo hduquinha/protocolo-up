@@ -4,50 +4,54 @@ const TrainingContentSection = () => {
   const pillars = [
     {
       icon: Brain,
-      week: "Semana 1",
-      title: "O Detox",
-      subtitle: "Dias 1-7 • Interrompendo o padrão negativo",
+      week: "Encontro 1",
+      title: "Mentalidade de Crescimento",
+      subtitle: "Dias 1-7 • Desbloqueie seu potencial",
       color: "amber",
       highlights: [
-        "Identificação dos gatilhos de vícios e autossabotagem",
-        "Estratégias de abstinência controlada",
-        "Limpeza do ambiente físico e digital"
+        "O que é mentalidade de crescimento?",
+        "Como identificar pensamentos limitantes",
+        "Práticas diárias para fortalecer a mentalidade de crescimento",
+        "Atividade: compartilhe um objetivo pessoal e como aplicar essa mentalidade"
       ]
     },
     {
       icon: Lightbulb,
-      week: "Semana 2",
-      title: "A Estabilização",
-      subtitle: "Dias 8-14 • Recuperando a clareza mental",
+      week: "Encontro 2",
+      title: "Gerenciando Ansiedade e Stress",
+      subtitle: "Dias 8-14 • Enfrente o stress com calma",
       color: "purple",
       highlights: [
-        "Técnicas para lidar com crises de abstinência e recaídas",
-        "Regulação do sono e energia vital",
-        "Introdução de micro-hábitos positivos"
+        "Identifique seus gatilhos de ansiedade e stress",
+        "Técnicas de respiração e relaxamento para o dia a dia",
+        "Estratégias simples para gerenciar o stress em 15 minutos",
+        "Atividade: descreva uma situação que gera ansiedade e como aplicará as técnicas"
       ]
     },
     {
       icon: Target,
-      week: "Semana 3",
-      title: "A Reconstrução",
-      subtitle: "Dias 15-21 • Instalando a nova arquitetura",
+      week: "Encontro 3",
+      title: "Comunicação Assertiva",
+      subtitle: "Dias 15-21 • Fale com confiança",
       color: "amber",
       highlights: [
-        "Construção da rotina matinal e noturna ideal",
-        "Técnicas de foco profundo (Deep Work)",
-        "Substituição de prazeres imediatos por recompensas de longo prazo"
+        "O que é comunicação assertiva e por que importa",
+        "Como expressar necessidades e limites com clareza",
+        "Práticas rápidas para melhorar sua comunicação",
+        "Atividade: simule uma conversa assertiva com um parceiro"
       ]
     },
     {
       icon: Users,
-      week: "Semana 4",
-      title: "A Consolidação",
-      subtitle: "Dias 22-28 • Blindando sua nova identidade",
+      week: "Encontro 4",
+      title: "Integração e Próximos Passos",
+      subtitle: "Dias 22-28 • Leve o aprendizado para a vida",
       color: "purple",
       highlights: [
-        "Plano de manutenção para os próximos 6 meses",
-        "Transformando disciplina em identidade ('Eu sou assim')",
-        "Encerramento e Celebração da nova versão"
+        "Revisão prática dos 3 encontros anteriores",
+        "Checklist de motivação e manutenção diária",
+        "Plano de ação para os próximos 28 dias",
+        "Atividade: compartilhe o que aprendeu e seu plano para seguir"
       ]
     }
   ];
@@ -70,7 +74,7 @@ const TrainingContentSection = () => {
             O Que Você Vai <span className="bg-gradient-to-r from-amber to-amber-light bg-clip-text text-transparent">Dominar</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Uma jornada completa e estruturada para reprogramar sua mente e construir a versão mais forte de você
+            4 encontros ao vivo em 28 dias para desbloquear potencial, reduzir ansiedade, comunicar com confiança e consolidar hábitos duradouros.
           </p>
         </div>
         
@@ -131,12 +135,10 @@ const TrainingContentSection = () => {
               </div>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              🎯 Metodologia Comprovada + Experiência Transformadora
+              🎯 4 Encontros Ao Vivo + Acompanhamento Diário
             </h3>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Combine o aprendizado estruturado com a aplicação diária de novos hábitos.
-              Uma jornada completa que vai <strong className="text-amber">reprogramar sua mente</strong> e 
-              <strong className="text-purple-light"> eliminar vícios</strong> que impedem seu sucesso.
+              Pratique a cada semana com desafios guiados, suporte da comunidade e aplicação imediata. Saia com um plano claro para manter a disciplina e a tranquilidade.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6">
